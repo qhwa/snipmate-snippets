@@ -1,3 +1,15 @@
+snippet pa
+	package ${1}
+	{
+		public class ${2:`Filename("")`}
+		{
+			public function ${3:`Filename("")`}()
+			{
+			}
+		}
+
+	
+	}
 snippet main
 	package {
 		import flash.display.*;
@@ -17,6 +29,7 @@ snippet main
 			}
 	
 		}
+
 	
 	}
 snippet class
@@ -129,7 +142,7 @@ snippet el
 snippet t
 	${1:/* condition */} ? ${2:a} : ${3:b}
 snippet fun
-	function ${1:function_name}(${2})${3}
+	function ${1:function_name}(${2}):${3}
 	{
 		${4:/* code */}
 	}
@@ -155,3 +168,51 @@ snippet FlxSprite
 		}
 	}
 
+# public method
+snippet m
+	public function ${1:method}(${2}):${3:void}
+	{
+		${4}
+	}
+
+# static public method
+snippet sm
+	static public function ${1:method}(${2}):${3:void}
+	{
+		${4}
+	}
+
+# private method
+snippet pm
+	private function ${1:method}(${2}):${3:void}
+	{
+		${4}
+	}
+
+# static private method
+snippet spm
+	static private function ${1:method}(${2}):${3:void}
+	{
+		${4}
+	}
+
+# protected method
+snippet pom
+	protected function ${1:method}(${2}):${3:void}
+	{
+		${4}
+	}
+
+# getter
+snippet get
+	public function get ${1:name}():${2:Type}
+	{
+		return ${3};
+	}
+
+# setter
+snippet set
+	public function set ${1:name}(value:${2:Type}):void
+	{
+			${3:name} = value;
+	}
